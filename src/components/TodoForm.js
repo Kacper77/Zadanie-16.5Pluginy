@@ -4,20 +4,17 @@ import style from './TodoForm.css';
 class TodoForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            newForm: ''
-        }
-
+        this.input = React.createRef();
         this.onClickHandler = this.onClickHandler.bind(this);
     }
     onClickHandler(form) {
-        this.props.join(this.state.newForm);
-        this.setState({ newForm })
+        this.props.addTodo(this.input.current.value)
     }
     render() {
         return (
             <div className={styleTodoForm}>
-                <button onClick={() => this.onClickHandler}>Dodaj</button>
+            	<input type="text" ref={this.input} value="GO" />
+				<button onClick={this.onClickHandler}>Dodaj</button>
             </div>
         );
     }

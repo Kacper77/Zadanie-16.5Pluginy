@@ -39,7 +39,7 @@ class App extends React.Component {
             <div className={style.TodoApp}>
                 <Title title = "Tasks:" numberTasks = {this.state.data.length} />
                 <TodoList todos={this.state.data} remove={this.removeTodo} />
-                <TodoForm join={this.joinTodoForm}/>
+                <TodoForm addTodo={this.addTodo}/>
             </div>
         );
     }
