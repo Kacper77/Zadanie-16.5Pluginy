@@ -1,3 +1,13 @@
 button {
     color: yellow;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.TodoForm {
+    background-color: #053f05;
+}
+
+input {
+    color: black;
 }
